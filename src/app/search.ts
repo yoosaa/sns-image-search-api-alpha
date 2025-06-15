@@ -10,7 +10,7 @@ searchRoute.get(
   zValidator('query', searchQuerySchema),
   async (c) => {
     const { q } = c.req.valid('query');
-    const results = await handleSearch(q);
+    const results = await handleSearch(c, q);
     return c.json(results);
   }
 );

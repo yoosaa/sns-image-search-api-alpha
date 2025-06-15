@@ -1,7 +1,8 @@
+import { Context } from 'hono';
 import { getEmbedding } from '../infra/openai';
 
-export async function handleSearch(query: string) {
-  const embedding = await getEmbedding(query);
+export async function handleSearch(c: Context, query: string) {
+  const embedding = await getEmbedding(c, query);
 
   // 仮の検索結果（ベクトル検索の代替）
   return [
