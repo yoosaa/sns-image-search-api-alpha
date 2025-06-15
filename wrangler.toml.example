@@ -1,0 +1,10 @@
+name = "sns-image-search-api"
+main = "src/index.ts"
+compatibility_date = "2025-06-15"
+
+# 環境変数はwrangler secretを使用して設定してください
+# 例: wrangler secret put OPENAI_API_KEY
+# このファイルには実際のAPIキーを記載しないでください
+
+[vars]
+# 環境変数はここに記載せず、wrangler secretを使用してください 
